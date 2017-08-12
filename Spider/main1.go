@@ -17,7 +17,7 @@ func print(c chan bool, n int) {
 func main() {
 	runtime.GOMAXPROCS(runtime.NumCPU())
 
-	// 管道方式
+	// 管道方式 有缓冲
 	c := make(chan bool, 10)
 
 	for i := 0; i < 10; i++ {
